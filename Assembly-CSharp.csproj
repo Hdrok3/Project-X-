@@ -61,12 +61,12 @@
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\KnockbackAttackEffect.cs" />
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackDefinition.cs" />
     <Compile Include="Assets\Scripts\Combat\IAttackEffect.cs" />
+    <Compile Include="Assets\Scripts\ScrollingText.cs" />
     <Compile Include="Assets\Scripts\Combat\MonoBehaviours\Enemy.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\ScrollingTextEffect.cs" />
     <Compile Include="Assets\Scripts\CameraRaycaster.cs" />
     <Compile Include="Assets\Scripts\Combat\Attack.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\ScrollingText.cs" />
-    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\ScrollingTextEffect.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

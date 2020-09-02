@@ -5,6 +5,7 @@ using TMPro;
 
 public class ScrollingText : MonoBehaviour
 {
+    private static int order = 0;
     public float duration = 1f;
     public float speed;
 
@@ -14,6 +15,8 @@ public class ScrollingText : MonoBehaviour
     void Awake()
     {
         textMesh = GetComponent<TextMeshPro>();
+        order = order++ % 100;
+        textMesh.sortingOrder = order; 
         startTime = Time.time;
         transform.rotation = Camera.main.transform.rotation;
 
