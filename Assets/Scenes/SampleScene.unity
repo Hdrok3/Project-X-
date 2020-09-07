@@ -146,7 +146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605183116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cadd53da7598d0944b15ecdb6afcd305, type: 3}
   m_Name: 
@@ -363,10 +363,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 6426667945236928385, guid: 28ad66b86156df141b02f44a5083369f, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 5595094786184435446, guid: 28ad66b86156df141b02f44a5083369f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6426667945236928385, guid: 28ad66b86156df141b02f44a5083369f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426667945236928385, guid: 28ad66b86156df141b02f44a5083369f, type: 3}
+      propertyPath: _stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 1adf2e7e25cb46545837f2fb0bef154d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ad66b86156df141b02f44a5083369f, type: 3}
 --- !u!1 &963194225
@@ -893,5 +901,9 @@ PrefabInstance:
       propertyPath: threshold
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6426667945236928385, guid: 28ad66b86156df141b02f44a5083369f, type: 3}
+      propertyPath: _stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 1adf2e7e25cb46545837f2fb0bef154d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ad66b86156df141b02f44a5083369f, type: 3}

@@ -9,8 +9,8 @@ public class CameraRaycaster : MonoBehaviour
     public int attackLayer;
     public float maxRaycastDepth;
 
-    [SerializeField] private OnTargetClickEvent OnTargetClick;
-    [SerializeField] private OnClickEvent OnClick;
+    [SerializeField] public OnTargetClickEvent OnTargetClick;
+    [SerializeField] public OnClickEvent OnClick;
 
     private void Update()
     {
