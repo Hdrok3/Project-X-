@@ -69,9 +69,10 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\ScrollingTextEffect.cs" />
     <Compile Include="Assets\Scripts\CameraRaycaster.cs" />
+    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\FireAttak.cs" />
     <Compile Include="Assets\Scripts\TestStats.cs" />
     <Compile Include="Assets\Scripts\Combat\Attack.cs" />
-    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\FireAttak.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
