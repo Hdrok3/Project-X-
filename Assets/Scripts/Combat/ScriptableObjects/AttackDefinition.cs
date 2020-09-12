@@ -8,12 +8,12 @@ public class AttackDefinition : ScriptableObject
 {
     [SerializeField] private List<AttackEffect> attackEffects = new List<AttackEffect>();
 
-    [SerializeField] private float coolDown;
-    [SerializeField] private float range;
-    [SerializeField] private float minDamage;
-    [SerializeField] private float maxDamage;
-    [SerializeField] private float critMultiplier;
-    [SerializeField] private float critChance;
+    [SerializeField] protected float coolDown;
+    [SerializeField] protected float range;
+    [SerializeField] protected float minDamage;
+    [SerializeField] protected float maxDamage;
+    [SerializeField] protected float critMultiplier;
+    [SerializeField] protected float critChance;
 
     // TODO:
     // Kullanici ve target statlarina ihtiyac var. (Fonksiyonun almasi gerekir.)
