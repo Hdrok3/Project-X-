@@ -31,8 +31,8 @@ public class ScrollingText : MonoBehaviour
             // transform.Translate(Vector3.up * speed * Time.deltaTime);
             float percent = (duration - (Time.time - startTime));
             textMesh.fontSize = Mathf.Lerp(1, 6, ((Time.time - startTime)*speed));
-            //textColor.a =  percent + 0.5f;
-            //textMesh.color = textColor;
+            textColor.a =  percent + 0.5f;
+            textMesh.color = textColor;
         }
         else
         {

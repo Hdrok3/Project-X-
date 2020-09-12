@@ -8,16 +8,16 @@ public class AttackDefinition : ScriptableObject
 {
     [SerializeField] private List<AttackEffect> attackEffects = new List<AttackEffect>();
 
-    [SerializeField] protected float coolDown;
-    [SerializeField] protected float range;
-    [SerializeField] protected float minDamage;
-    [SerializeField] protected float maxDamage;
-    [SerializeField] protected float critMultiplier;
-    [SerializeField] protected float critChance;
+    [SerializeField] private float coolDown;
+    [SerializeField] private float range;
+    [SerializeField] private float minDamage;
+    [SerializeField] private float maxDamage;
+    [SerializeField] private float critMultiplier;
+    [SerializeField] private float critChance;
 
     // TODO:
     // Kullanici ve target statlarina ihtiyac var. (Fonksiyonun almasi gerekir.)
-    public virtual Attack CreateAttack(GameObject attacker, GameObject defender)
+    public Attack CreateAttack(GameObject attacker, GameObject defender)
     {
         // float coreDamage = attacker.GetDamage();
         float coreDamage = 0;
@@ -32,7 +32,7 @@ public class AttackDefinition : ScriptableObject
         return new Attack((int)coreDamage, isCritical);
     }
 
-    public virtual void ExecuteAttackEffecs(GameObject attacker, GameObject defender, Attack attack)
+    public void ExecuteAttackEffecs(GameObject attacker, GameObject defender, Attack attack)
     {
         foreach (var effect in attackEffects)
         {

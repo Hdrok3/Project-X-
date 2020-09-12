@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-
     [SerializeField] private AttackDefinition demoAttack;
     public float threshold = 2f;
 
@@ -14,13 +13,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     private void Start()
     {
-
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
-    // MouseManager => UnityEvents
     private void Update()
     {
         anim.SetFloat("Speed", agent.velocity.magnitude);
@@ -34,7 +31,7 @@ public class PlayerController : MonoBehaviour
         agent.SetDestination(point);
     }
 
-    // MouseManager => UnityEvents
+
     public void AttackTarget(GameObject target)
     {
         IAttackable attackable = target.GetComponent<IAttackable>();

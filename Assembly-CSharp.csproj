@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1B54D4FC-DE2C-F808-7198-A6FAB832CE60}</ProjectGuid>
+    <ProjectGuid>{8D995B25-B990-F2C0-D08D-0FF17E1C2484}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,21 +58,20 @@
     <Compile Include="Assets\Scripts\Factory\Factory.cs" />
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\AttackEffect.cs" />
     <Compile Include="Assets\Scripts\State\MainMenuState\InvantoryState.cs" />
+    <Compile Include="Assets\Scripts\State\MainMenuState\MainMenuState.cs" />
     <Compile Include="Assets\Scripts\Class1.cs" />
     <Compile Include="Assets\Scripts\StateController.cs" />
     <Compile Include="Assets\Scripts\State\MainMenuState\SkillState.cs" />
     <Compile Include="Assets\Scripts\Factory\MenuStateFactory.cs" />
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\AttackDebugEffect.cs" />
     <Compile Include="Assets\Scripts\Combat\IAttackable.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\WeaponAttack.cs" />
-=======
     <Compile Include="Assets\Scripts\State\MainMenuState\ShopState.cs" />
     <Compile Include="Assets\Scripts\State\MainMenuState\ArcState.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\State\PlayingState.cs" />
     <Compile Include="Assets\Scripts\State\GameState.cs" />
->>>>>>> Ali/Main-Menu
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\KnockbackAttackEffect.cs" />
     <Compile Include="Assets\Scripts\State\MenuState.cs" />
     <Compile Include="Assets\Scripts\Factory\StateFactory.cs" />
@@ -82,23 +81,14 @@
     <Compile Include="Assets\Scripts\Combat\IAttackEffect.cs" />
     <Compile Include="Assets\Scripts\ScrollingText.cs" />
     <Compile Include="Assets\Scripts\Combat\MonoBehaviours\Enemy.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Test.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\ScrollingTextEffect.cs" />
-    <Compile Include="Assets\Scripts\CameraRaycaster.cs" />
-    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\FireAttak.cs" />
-    <Compile Include="Assets\Scripts\TestStats.cs" />
-    <Compile Include="Assets\Scripts\Combat\Attack.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-=======
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\ScrollingTextEffect.cs" />
     <Compile Include="Assets\Scripts\State\PauseState.cs" />
     <Compile Include="Assets\Scripts\CameraRaycaster.cs" />
+    <Compile Include="Assets\Scripts\Combat\ScriptableObjects\AttackEffects\FireAttak.cs" />
+    <Compile Include="Assets\Scripts\TestStats.cs" />
     <Compile Include="Assets\Scripts\Combat\Attack.cs" />
-    <Compile Include="Assets\Scripts\State\MainMenuState\MainMenuState.cs" />
->>>>>>> Ali/Main-Menu
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -310,15 +300,6 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
