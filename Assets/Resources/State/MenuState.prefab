@@ -537,6 +537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e04fd7f4768a743993de1a1459bf6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shopButton: {fileID: 3986254187617023668}
+  _invantoryButton: {fileID: 3986254186566495227}
+  _arcButton: {fileID: 3986254188560528826}
+  _skillButton: {fileID: 3986254186690246678}
 --- !u!1 &3986254187156814947
 GameObject:
   m_ObjectHideFlags: 0

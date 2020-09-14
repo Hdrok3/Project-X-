@@ -4,8 +4,5 @@ using UnityEngine;
 
 public abstract class StateFactory : Factory
 {
-    public StateFactory()
-    {
-
-    }
+ 
 }

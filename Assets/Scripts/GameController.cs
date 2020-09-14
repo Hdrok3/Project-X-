@@ -13,9 +13,10 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
-    void Awake()
+    void Start()
     {
         _instance = this;
         _stateController = new StateController();
+        Instantiate(Resources.Load<GameObject>("State/MenuState"));
     }
 }
