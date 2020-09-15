@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Weapon", menuName = "Combat/Weapon")]
-public abstract class WeaponAttack : AttackDefinition
+[CreateAssetMenu(fileName = "New Weapon", menuName = "Combat/Weapon Attack")]
+public class WeaponAttack : AttackDefinition
 {
     [SerializeField] private GameObject weaponPrefab;
 

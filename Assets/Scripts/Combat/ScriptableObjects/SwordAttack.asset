@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94345252a48beb45a92363181f613d0, type: 3}
+  m_Name: SwordAttack
+  m_EditorClassIdentifier: 
+  attackEffects:
+  - {fileID: 11400000, guid: 2622cf2c7f1126c45be8839fe6a897bc, type: 2}
+  coolDown: 0
+  range: 1.89
+  minDamage: 15
+  maxDamage: 25
+  critMultiplier: 2
+  critChance: 0.3
+  weaponPrefab: {fileID: 0}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="Fire Attack", menuName = "Combat/Effects/Fire Effect")]
+[CreateAssetMenu(fileName ="Fire Attack", menuName = "Combat/AttackEffects/Fire Effect")]
 public class FireAttak : AttackEffect
 {
     public ParticleSystem burningEfffect;

@@ -21,6 +21,7 @@ public class CameraRaycaster : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxRaycastDepth))
             {
+                Debug.Log(hit.transform.name);
                 if(hit.transform.gameObject.layer == attackLayer)
                 {
                     OnTargetClick?.Invoke(hit.transform.gameObject);
