@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     // TODO:
     // Burasi değiştirilecek, weapon içerisine koyulacak, weapon attack.
     [SerializeField] private WeaponAttack demoAttack;
+    public LayerMask enemyLayer;
     public float threshold = 2f;
 
     private GameObject _attackTarget;
@@ -15,64 +16,38 @@ public class PlayerController : MonoBehaviour
     NavMeshAgent agent;
     Animator anim;
     Rigidbody rb;
+    CharacterStateMachine stateMachine;
+    InputManager keyboardAndMouseInput;
+
+    public Animator Animator => anim;
+    public NavMeshAgent Agent => agent;
+    public InputManager InputManager => keyboardAndMouseInput;
+    public GameObject AttackTarget { get => _attackTarget; set => _attackTarget = value; }
+    public float AttackRange => demoAttack.Range;
+
+    public bool CanAttack { get; set; }
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        keyboardAndMouseInput = GetComponent<InputManager>();
+
+        stateMachine = new CharacterStateMachine(this);
+
+
+        var testColls = Physics.OverlapSphere(transform.position, 50, enemyLayer);
+        var go = testColls.FindClosestGameObject(transform);
+
+        Debug.Log(go.name);
     }
 
     private void Update()
     {
-        anim.SetFloat("Speed", agent.velocity.magnitude);
-    }
-    public void MoveToTarget(Vector3 point)
-    {
-        if (Vector3.Distance(point, transform.position) < threshold)
-        {
-            return;
-        }
-
-        StopAllCoroutines();
-        agent.isStopped = false;
-        agent.SetDestination(point);
+        stateMachine.Update();
     }
 
-
-    public void AttackTarget(GameObject target)
-    {
-        // get current weapon
-
-        // check if weapon not null
-        if(true)
-        {
-            StopAllCoroutines();
-
-            agent.isStopped = false;
-            _attackTarget = target;
-
-            StartCoroutine(PursueAndAttackTarget());
-        }
-    }
-
-    private IEnumerator PursueAndAttackTarget()
-    {
-        agent.isStopped = false;
-        // var weapon = currentWeapon();
-        while(Vector3.Distance(transform.position, _attackTarget.transform.position) > demoAttack.Range)
-        {
-            // Vector3 dirTargetToThis= (transform.position - _attackTarget.transform.position).normalized;
-            // Vector3 targetDestination = _attackTarget.transform.position + (dirTargetToThis * (demoAttack.Range - 0.15f));
-
-            agent.destination = _attackTarget.transform.position;
-            yield return null;
-        }
-
-        agent.isStopped = true;
-
-        transform.LookAt(_attackTarget.transform);
-        anim.SetTrigger("Attack");
-    }
 
     public void Hit()
     {
@@ -80,6 +55,16 @@ public class PlayerController : MonoBehaviour
         {
             demoAttack.ExecuteAttack(gameObject, _attackTarget);
         }
+    }
+
+    public void AttackFinished()
+    {
+        CanAttack = true;
+    }
+
+    public void SetAttackTarget(GameObject target)
+    {
+        _attackTarget = target;
     }
 
     private void OnDrawGizmos()
